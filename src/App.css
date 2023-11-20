@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+
+.headText{
+    font-weight: 700;
+    font-size: 48px;
+    padding-bottom: 50px;
+} 
+header{  
+    display: inline-block;
+    position: absolute;   
+}
+header nav{  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav h1{
+    font-weight: 700;
+    font-size: 36px;
+}
+header nav a{
+    padding: 10px;
+    font-weight: 400;
+    font-size: 15px;
+}
+header nav a.active{
+    border-bottom:1px solid white;
+}
+.bannerImg{  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.bannerImg img{
+    /* outline: 1px solid rgba(0, 0, 0, 0.212);
+    border:18px solid #2A2727; */
+    height: 550px;
+    width: 550px;
+    /* border-radius: 100%;  */ 
+    animation: recoxl 2s ease-in-out infinite alternate;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes recoxl {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px); 
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+    
+}
+.bannerText{ 
+    display: flex;
+    flex-direction: column; 
+}
+.bannerText h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+.bannerText p{
+    color:#828282;
+    font-weight: 500;
+    font-size: 18px;
+}
+.aboutSection h1{
+    font-weight: 700;
+    font-size: 68px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutSection{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.aboutSection p{  
+    padding-top: 38px;
+    font-weight: 400;
+    font-size: 18px;
+    width: 55%;
+    text-align: center;
+} 
+.about-box{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+.about-box .circle{
+    width: 100px;
+    height: 100px;
+    background-color:#212121;
+    border-radius: 100%;
+    border:white;
+    position: relative;
+    margin-bottom: 18px;
+}
+.about-box .circle::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top:50%;
+    left:50%;
+    border-radius: 100%;
+    background-color: #27AE60;
+    transform: translate(-50%,-50%);
+}  
+.services-box{
+    background-color: #212121; 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 35px 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.services-box h1{ 
+    color:#535353;
+    font-size: 32px; 
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.skills-section{
+    width: 100%;
+    background-color: #212121; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 50px;
 }
-
-.App-link {
-  color: #61dafb;
+.skills-section h1{
+    font-size: 72px;
+    color: #4F4F4F;
+    font-weight: 700;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.skills-section p{
+    font-weight: 400;
+    font-size: 24px;
 }
+.contact-form{
+    padding-bottom: 20px;
+}
+.contact-form form input{
+    width: 358px;
+}
+.contact-form form textarea{
+    width: 764px;
+}
+ 
